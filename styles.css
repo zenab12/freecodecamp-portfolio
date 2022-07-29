@@ -1,0 +1,222 @@
+*,::after,::before {
+     margin:0;
+     padding:0;
+     box-sizing:border-box;
+}
+ :root {
+     --main-color:#ffb424;
+     --secondary-color:#303;
+     --White-color:#fefefe;
+}
+ a {
+     text-decoration:none;
+     color:var(--secondary-color);
+     font-size:1.1rem;
+}
+ body {
+     font-family: 'Blinker', sans-serif;
+     color:var(--secondary-color);
+     overflow-x:clip;
+}
+ header {
+     display:flex;
+     justify-content:space-between;
+     align-items:center;
+     padding:10px ;
+     flex-wrap:wrap;
+     border-bottom:1px solid #eee;
+     background:#fefefe;
+     position:fixed;
+     width:100%;
+     top:0;
+     left:0;
+     z-index:999;
+}
+ header a.logo {
+     font-size:25px;
+     font-family: 'Syncopate', sans-serif;
+}
+ header span {
+     font-family: 'Monoton', cursive;
+     font-size:40px;
+     color:var(--main-color) 
+}
+ header nav ul {
+     list-style:none;
+     display:flex;
+     gap:40px 
+}
+ header nav ul li a, section#contact ul li a {
+     font-weight:400;
+     font-size:1.2rem;
+     height:100%;
+     width:100%;
+     display:block;
+     transition:all .5s ease-in-out 0ms;
+}
+ header nav ul li a:hover, section#contact ul li a:hover {
+     color:var(--main-color);
+}
+ main {
+    width:80%;
+     margin:10px auto;
+}
+ section#welcome-section {
+     display:flex;
+     justify-content:space-between;
+     flex-wrap:wrap;
+     align-self:center;
+     gap:10px;
+     padding: 10px 50px;
+     margin-top:100px 
+}
+ section#welcome-section .description {
+     align-self:center;
+}
+ section#welcome-section .description h1 {
+     font-size:45px;
+}
+ section#welcome-section .description h1 .name {
+     color:var(--main-color) 
+}
+ section#welcome-section .description p {
+     margin:10px 0px;
+}
+ section#welcome-section a img{
+    width:700px;
+    height:500px;
+    align-self:center;
+    object-fit:cover;
+     position:relative;
+     right:-150px;
+}
+ section#projects {
+     text-align:center;
+     margin:-10px auto;
+}
+ section h2 {
+     margin-bottom:30px;
+     text-align:center;
+}
+ section h2::after {
+     content:" ";
+     border-left:transparent;
+     border-top:transparent;
+     border-bottom: var(--main-color);
+     border-right: transparent;
+     border-style:solid;
+     margin:-10px auto;
+     width:150px;
+     height:20px;
+     display:block;
+}
+ section#projects{
+    padding:20px;
+}
+ section#projects ul {
+     list-style:none;
+     display:flex;
+     justify-content:space-between;
+     gap:30px;
+     flex-wrap:wrap;
+     margin:50px auto;
+}
+ section#projects a {
+    width:300px;
+    display:block;
+    border-radius:15px;
+}
+ section#projects a img {
+    width:100%;
+    border-radius:15px 15px 0px 0px;
+}
+ section#projects a p {
+     background-color:#fff2f2;
+     padding:20px;
+     font-weight:bold;
+     border-top:5px double var(--main-color);
+     border-radius:0px 0px 15px 15px;
+}
+ section#projects a code {
+     transition:all .7s linear;
+     padding:10px;
+     opacity:0;
+}
+ section#projects a:hover code {
+     color:var(--main-color);
+     opacity:1;
+}
+ #contact{
+    text-align:center;
+}
+ #contact ul {
+     display:flex;
+     justify-content:space-between;
+     align-items:center;
+     list-style:none;
+     margin:50px auto;
+     gap:20px;
+     flex-wrap:wrap;
+}
+ footer {
+     text-align:center;
+     background:var(--White-color);
+     padding:10px 0px;
+     border-top:2px solid #ddd;
+}
+ @media (max-width:768px) {
+     header{
+        justify-content:center;
+        flex-direction:column
+    }
+     nav ul{
+        width:100%;
+        align-self:center;
+    }
+     section#welcome-section {
+         padding-top:60px;
+         text-align:center;
+    }
+     section#welcome-section .description {
+         width:100%;
+    }
+     section#welcome-section a img {
+         width:400px;
+         height:400px;
+         align-self:center;
+         position:relative;
+         right:-100px;
+         display:block;
+         top:-30px;
+    }
+     section#projects ul {
+         align-self:center;
+         justify-content:center;
+    }
+}
+ @media (max-width:558px) {
+     section#welcome-section a img {
+         right:-10px;
+         display:block;
+         top:-30px;
+    }
+}
+ @media (max-width:500px) {
+     section#welcome-section a img {
+         width:300px;
+         height:290px;
+         right:-10px;
+         display:block;
+         top:-30px;
+    }
+}
+ @media (min-width:700px) and (max-width:1100px) {
+     section#welcome-section a img {
+         width:350px;
+         height:390px;
+         right:-10px;
+         display:block;
+         top:0px;
+    }
+}
+ 
